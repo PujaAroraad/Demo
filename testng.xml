@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+  <parameter name="validUserName" value="9450007762"></parameter>
+  <parameter name="invalidUserName" value="abc"></parameter>
+  <parameter name="invalidUserName1" value="xyz@gmail.com"></parameter>
+  <groups>
+  		<run>
+  			<include name="invalid"></include>
+  			<include name="valid"></include>
+  		</run>
+  	</groups>
+    <classes>
+      <class name="tests.LoginTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

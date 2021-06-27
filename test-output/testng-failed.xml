@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test thread-count="5" name="Test(failed)">
+    <parameter name="validUserName" value="9450007762"/>
+    <parameter name="invalidUserName" value="abc"/>
+    <parameter name="invalidUserName1" value="xyz@gmail.com"/>
+    <groups>
+      <run>
+        <include name="invalid"/>
+        <include name="valid"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="tests.LoginTest">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="endReport"/>
+          <include name="validLogin"/>
+          <include name="invalidLogin1"/>
+          <include name="openBrowser"/>
+          <include name="intializeWebdriver"/>
+          <include name="invalidLogin"/>
+          <include name="setExtent"/>
+        </methods>
+      </class> <!-- tests.LoginTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
