@@ -16,7 +16,7 @@
         <methods>
           <include name="closeBrowser"/>
           <include name="endReport"/>
-          <include name="validLogin"/>
+          <include name="validLogin" invocation-numbers="0"/>
           <include name="invalidLogin1"/>
           <include name="openBrowser"/>
           <include name="intializeWebdriver"/>

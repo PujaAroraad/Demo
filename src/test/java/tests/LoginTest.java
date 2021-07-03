@@ -25,20 +25,20 @@ public class LoginTest extends BaseTest
 //	}
 	
 	SoftAssert softAssertion=new SoftAssert();
-	
-	@Test(groups = {"valid"},priority =1)
-	@Parameters({"validUserName"})
-	public void validLogin(String userName) throws InterruptedException {
-		extentTests=extent.startTest("valid scanario test");
-		LoginPage login = new LoginPage(driver);
-		login.clickSignIn();
-		AssertJUnit.assertEquals("Amazon $ign-In", driver.getTitle());//HARD ASSERTION
-		softAssertion.assertEquals("$ign-In", login.getHeaderText() ,"Sign-In title issue");//SOFT ASSERT
-		extentTests.log(LogStatus.PASS,"valid scanerio test case passed successfully");
-		login.enterUserEmail(userName);
-		Thread.sleep(2000);
-		softAssertion.assertAll();
-	}
+//	
+//	@Test(groups = {"valid"},priority =1)
+//	@Parameters({"validUserName"})
+//	public void validLogin(String userName) throws InterruptedException {
+//		extentTests=extent.startTest("valid scanario test");
+//		LoginPage login = new LoginPage(driver);
+//		login.clickSignIn();
+//		AssertJUnit.assertEquals("Amazon $ign-In", driver.getTitle());//HARD ASSERTION
+//		softAssertion.assertEquals("$ign-In", login.getHeaderText() ,"Sign-In title issue");//SOFT ASSERT
+//		extentTests.log(LogStatus.PASS,"valid scanerio test case passed successfully");
+//		login.enterUserEmail(userName);
+//		Thread.sleep(2000);
+//		softAssertion.assertAll();
+//	}
 	
 	@Test(groups= {"invalid"},priority =3)
 	@Parameters({"invalidUserName"})

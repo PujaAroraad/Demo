@@ -58,11 +58,13 @@ public class BaseTest {
 	}
 	
 	@BeforeMethod(groups= {"valid" , "invalid"})
-	public static void intializeWebdriver() {
+	public static void intializeWebdriver(){
 
 		System.setProperty("webdriver.chrome.driver",".\\\\Drivers\\\\chromeDriver\\\\chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		
+		
 	}
 
 	@BeforeMethod(groups= {"valid", "invalid"})
